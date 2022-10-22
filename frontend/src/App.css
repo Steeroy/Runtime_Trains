@@ -1,0 +1,582 @@
+@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+  color: unset;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+.button__primary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #dbdbdb;
+  background-color: #212121;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+.button__primary:hover {
+  background-color: #636262;
+  color: #fff;
+}
+
+.button__secondary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #212121;
+  background-color: #dbdbdb;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+.button__secondary:hover {
+  background-color: #8a8a8a;
+  color: #ebebeb;
+}
+
+.button__tertiary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #212121;
+  background-color: #f7b500;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  border: 0.5px solid #212121;
+}
+.button__tertiary:hover {
+  background-color: #dbdbdb;
+  color: #f7b500;
+  border: 1px solid #f7b500;
+}
+
+.line__separater {
+  width: 100%;
+  background: #363636;
+  height: 1px;
+  border-radius: 5px;
+}
+
+.section__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f7b500;
+  -webkit-text-stroke: 0.25px #212121;
+}
+
+header {
+  background-color: #f7b500;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99;
+}
+header .nav__wrapper {
+  padding: 12px 0px 12px 0px;
+}
+header .nav__wrapper .logo h2 {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 28px;
+  color: #212121;
+}
+header .nav__wrapper .menu a {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  transition: 0.8s;
+}
+header .nav__wrapper .menu a:hover {
+  font-weight: 700;
+}
+header .nav__wrapper .menu .menu__close {
+  display: none;
+}
+header .nav__wrapper .nav__right .menu__burger {
+  display: none;
+}
+header .nav__wrapper .menu__active {
+  font-weight: 700 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .nav__wrapper .menu__active .dash {
+  width: 80%;
+  height: 3px;
+  background-color: #212121;
+  border-radius: 15px;
+  margin-top: 8px;
+}
+
+.tickets {
+  padding: 0 !important;
+}
+.tickets .col {
+  padding: 0px !important;
+}
+.tickets .book__form {
+  margin-bottom: 64px;
+}
+.tickets .book__form .book__group {
+  margin-bottom: 0px !important;
+}
+.tickets .book__form .form__labels {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.tickets .book__form .form__input {
+  width: 180px !important;
+}
+.tickets .book__form .time__input {
+  width: 120px !important;
+}
+.tickets .book__form .form__button__group {
+  transform: translateY(21px);
+}
+.tickets .available__trains {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.train__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 5px;
+  width: 240px;
+  height: 260px;
+  background: #ffc420;
+  margin-bottom: 28px;
+  box-shadow: -20px -20px 20px rgba(255, 255, 255, 0.7), 20px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.train__card .train__img {
+  width: 216px;
+  height: 130px;
+  border-radius: 5px !important;
+}
+.train__card .train__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.train__card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(33, 33, 33, 0.7);
+}
+.train__card h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #212121;
+}
+.train__card .price__bookmark {
+  display: flex;
+  justify-content: space-between;
+}
+.train__card .price__bookmark h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #212121;
+}
+.train__card .price__bookmark h4 span {
+  font-size: 16px;
+}
+.train__card .price__bookmark .add__item {
+  display: flex;
+  gap: 16px;
+}
+.train__card .price__bookmark .add__item .bookmark,
+.train__card .price__bookmark .add__item .add__round {
+  width: 22px;
+  height: 22px;
+}
+.train__card .price__bookmark .add__item .bookmark path {
+  color: rgba(33, 33, 33, 0.8);
+}
+.train__card .price__bookmark .add__item .add__round path {
+  color: #212121;
+}
+
+footer {
+  background: #f7b500;
+  padding: 32px 0px 0px 0px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+footer .first__row {
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .first__row .news__col {
+  width: 40%;
+}
+footer .first__row .news__col .newsletter__subscribe .form__input {
+  margin-bottom: 0 !important;
+}
+footer .first__row .news__col .newsletter__subscribe .form__input .news__text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(33, 33, 33, 0.8);
+}
+footer .first__row .news__col .newsletter__subscribe .form__input .input__text {
+  height: 40px;
+  background: #ad8007;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+}
+footer .first__row .news__col .newsletter__subscribe .form__input .input__text::-moz-placeholder {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: rgba(33, 33, 33, 0.7);
+}
+footer .first__row .news__col .newsletter__subscribe .form__input .input__text:-ms-input-placeholder {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: rgba(33, 33, 33, 0.7);
+}
+footer .first__row .news__col .newsletter__subscribe .form__input .input__text::placeholder {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: rgba(33, 33, 33, 0.7);
+}
+footer .first__row .news__col .newsletter__subscribe .form__input .input__text:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+footer .first__row .news__col .newsletter__subscribe .sub__button {
+  border-radius: 0px 5px 5px 0px !important;
+}
+footer .first__row .menu__col h4 {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 26px;
+  display: flex;
+  justify-content: flex-end;
+}
+footer .first__row .menu__col .footer__menu a {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none !important;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+footer .first__row .menu__col .footer__menu .footer__menu__active {
+  font-weight: 800;
+}
+footer .first__row .contact__us h4 {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 26px;
+  display: flex;
+  justify-content: flex-start;
+}
+footer .first__row .contact__us .address p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.75);
+  line-height: 32px;
+  transform: translateY(-2px);
+}
+footer .third__row {
+  margin-bottom: 24px;
+}
+footer .third__row .rights__reserved {
+  padding: 0px;
+}
+footer .third__row .rights__reserved p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.7);
+}
+footer .third__row .design {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+footer .third__row .design p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.7);
+}
+footer .third__row .icons {
+  height: 40px;
+  justify-content: flex-end;
+  padding: 0px;
+  align-items: flex-start;
+  transform: translateY(-8px);
+}
+footer .third__row .icons svg {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+}
+footer .third__row .icons svg:nth-child(2) {
+  width: 30px;
+  height: 30px;
+}
+footer .third__row .icons svg path {
+  color: rgba(33, 33, 33, 0.7);
+}
+footer .train__illustration {
+  width: 239px;
+  height: 243px;
+}
+footer .train__illustration img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    width: 100%;
+  }
+  .nav__wrapper .logo h2 {
+    font-size: 24px;
+  }
+  .nav__wrapper .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.425);
+    z-index: 99;
+    display: none;
+  }
+  .nav__wrapper .navigation .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    line-height: 20px;
+  }
+  .nav__wrapper .navigation .menu .menu__close {
+    display: block !important;
+  }
+  .nav__wrapper .navigation .menu a {
+    font-size: 0.9rem;
+  }
+  .nav__wrapper .show__menu {
+    display: block;
+  }
+  .nav__wrapper .menu__burger {
+    display: block !important;
+  }
+  .nav__wrapper .nav__right {
+    gap: 32px !important;
+  }
+  footer .first__row {
+    justify-content: space-between;
+  }
+  footer .first__row .news__col {
+    width: 100%;
+  }
+  footer .first__row .news__col .train__illustration {
+    height: 159px;
+    width: 163px;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input .news__text {
+    font-size: 16px;
+    transform: translateY(8px);
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input input {
+    width: 180px;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input input::-moz-placeholder {
+    font-size: 14px !important;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input input:-ms-input-placeholder {
+    font-size: 14px !important;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input input::placeholder {
+    font-size: 14px !important;
+  }
+  footer .first__row .menu__col {
+    gap: 16px !important;
+    margin-top: 32px;
+    width: 45%;
+  }
+  footer .first__row .menu__col h4 {
+    font-size: 22px;
+  }
+  footer .first__row .menu__col .footer__menu a {
+    font-size: 14px;
+  }
+  footer .first__row .contact__us {
+    margin-top: 32px;
+    gap: 16px !important;
+    width: 45%;
+  }
+  footer .first__row .contact__us h4 {
+    font-size: 22px;
+  }
+  footer .first__row .contact__us .address p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shadow {
+    width: 100vw !important;
+    padding: 12px 16px 12px 16px !important;
+  }
+  .button__primary,
+.button__secondary,
+.button__tertiary {
+    height: 36px !important;
+    font-size: 14px !important;
+    padding: 0px 16px 0px 16px !important;
+  }
+  .header {
+    width: 100% !important;
+    display: contents;
+  }
+  .nav__wrapper {
+    padding: 0 !important;
+  }
+  .nav__wrapper .logo h2 {
+    font-size: 22px !important;
+  }
+  .nav__wrapper .nav__right {
+    gap: 24px !important;
+  }
+  .nav__wrapper .menu a {
+    font-size: 14px !important;
+  }
+  footer .form__input input {
+    height: 36px;
+  }
+  footer .third__row .design {
+    width: 33%;
+  }
+  footer .third__row .icons {
+    width: 33%;
+  }
+  footer .third__row .rights__reserved {
+    width: 33% !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .button__primary,
+.button__secondary,
+.button__tertiary {
+    height: 28px !important;
+    font-size: 12px !important;
+    padding: 0px 12px 0px 12px !important;
+  }
+  .shadow {
+    width: 100vw !important;
+    padding: 8px 8px 8px 8px !important;
+  }
+  .shadow .nav__wrapper .logo h2 {
+    font-size: 14px;
+    font-family: "Gilroy-Bold", sans-serif;
+    line-height: normal !important;
+  }
+  .shadow .nav__wrapper .nav__right {
+    gap: 16px !important;
+  }
+  footer .first__row .news__col .train__illustration {
+    width: 143px;
+    height: 139px;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input .news__text {
+    font-size: 14px;
+    transform: translateY(6px);
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input .input__text {
+    height: 28px !important;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input .input__text::-moz-placeholder {
+    font-size: 14px !important;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input .input__text:-ms-input-placeholder {
+    font-size: 14px !important;
+  }
+  footer .first__row .news__col .newsletter__subscribe .form__input .input__text::placeholder {
+    font-size: 14px !important;
+  }
+  footer .first__row .menu__col h4 {
+    font-size: 18px;
+  }
+  footer .first__row .menu__col .footer__menu a {
+    font-size: 12px;
+  }
+  footer .first__row .contact__us h4 {
+    font-size: 18px;
+  }
+  footer .first__row .contact__us .address p {
+    font-size: 12px;
+  }
+  footer .third__row .rights__reserved {
+    width: 100% !important;
+    display: flex;
+    justify-content: center !important;
+  }
+  footer .third__row .design {
+    width: 100%;
+  }
+  footer .third__row .icons {
+    width: 100%;
+    justify-content: center;
+    gap: 32px !important;
+  }
+}/*# sourceMappingURL=App.css.map */

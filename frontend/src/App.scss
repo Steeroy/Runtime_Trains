@@ -1,0 +1,742 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+  color: unset;
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}
+
+//Styles for buttons and their hover states
+.button__primary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #dbdbdb;
+  background-color: #212121;
+  border-radius: 5px;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: #636262;
+    color: #fff;
+  }
+}
+
+.button__secondary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #212121;
+  background-color: #dbdbdb;
+  border-radius: 5px;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: #8a8a8a;
+    color: #ebebeb;
+  }
+}
+
+.button__tertiary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 0px 20px 0px 20px;
+  color: #212121;
+  background-color: #f7b500;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  border: 0.5px solid #212121;
+
+  &:hover {
+    background-color: #dbdbdb;
+    color: #f7b500;
+    border: 1px solid #f7b500;
+  }
+}
+
+.line__separater {
+  width: 100%;
+  background: #363636;
+  height: 1px;
+  border-radius: 5px;
+}
+
+.section__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f7b500;
+  -webkit-text-stroke: 0.25px #212121;
+}
+
+//Styles for the navbar
+header {
+  background-color: #f7b500;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99;
+
+  .nav__wrapper {
+    padding: 12px 0px 12px 0px;
+
+    //Style for logo
+    .logo {
+      h2 {
+        font-family: 'Gilroy-Bold', sans-serif;
+        font-size: 28px;
+        color: #212121;
+      }
+    }
+
+    //Styles for the menu items
+    .menu {
+      a {
+        font-weight: 400;
+        font-size: 1rem;
+        color: #212121;
+        font-family: 'Poppins', sans-serif;
+        transition: 0.8s;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+
+      .menu__close {
+        display: none;
+      }
+    }
+
+    .nav__right {
+      .menu__burger {
+        display: none;
+      }
+    }
+
+    .menu__active {
+      font-weight: 700 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .dash {
+        width: calc(100% - 20%);
+        height: 3px;
+        background-color: #212121;
+        border-radius: 15px;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+//styles for the Tickets page
+.tickets {
+  padding: 0 !important;
+
+  .col {
+    padding: 0px !important;
+  }
+
+  .book__form {
+    margin-bottom: 64px;
+    .book__group {
+      margin-bottom: 0px !important;
+    }
+
+    .form__labels {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .form__input {
+      width: 180px !important;
+    }
+
+    .time__input {
+      width: 120px !important;
+    }
+
+    .form__button__group {
+      transform: translateY(21px);
+
+      .search__train {
+      }
+    }
+  }
+
+  .available__trains {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+
+//styles for train card
+.train__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 5px;
+  width: 240px;
+  height: 260px;
+  background: #ffc420;
+  margin-bottom: 28px;
+  box-shadow: -20px -20px 20px rgba(255, 255, 255, 0.7),
+    20px 20px 20px rgba(0, 0, 0, 0.1);
+
+  .train__img {
+    width: 216px;
+    height: 130px;
+    border-radius: 5px !important;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(33, 33, 33, 0.7);
+  }
+
+  h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #212121;
+  }
+
+  .price__bookmark {
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #212121;
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .add__item {
+      display: flex;
+      gap: 16px;
+
+      .bookmark,
+      .add__round {
+        width: 22px;
+        height: 22px;
+      }
+
+      .bookmark path {
+        color: rgba(33, 33, 33, 0.8);
+      }
+
+      .add__round path {
+        color: #212121;
+      }
+    }
+  }
+}
+
+//styles for the footer
+footer {
+  background: #f7b500;
+  padding: 32px 0px 0px 0px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .first__row {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    .news__col {
+      width: 40%;
+
+      .newsletter__subscribe {
+        .form__input {
+          margin-bottom: 0 !important;
+
+          .news__text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: rgba(33, 33, 33, 0.8);
+          }
+
+          .input__text {
+            height: 40px;
+            background: #ad8007;
+            border-radius: 5px 0px 0px 5px;
+            border: none;
+
+            &::placeholder {
+              font-size: 16px;
+              font-family: 'Poppins', sans-serif;
+              font-weight: 300;
+              color: rgba(33, 33, 33, 0.7);
+            }
+
+            &:focus {
+              border: none;
+              outline: none;
+              box-shadow: none;
+            }
+          }
+        }
+
+        .sub__button {
+          border-radius: 0px 5px 5px 0px !important;
+        }
+      }
+    }
+
+    .menu__col {
+      h4 {
+        font-family: 'Gilroy-Bold', sans-serif;
+        font-size: 26px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .footer__menu {
+        a {
+          display: flex;
+          justify-content: flex-end;
+          text-decoration: none !important;
+          color: #212121;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        .footer__menu__active {
+          font-weight: 800;
+        }
+      }
+    }
+
+    .contact__us {
+      h4 {
+        font-family: 'Gilroy-Bold', sans-serif;
+        font-size: 26px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .address {
+        p {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 200;
+          font-size: 16px;
+          color: rgba(33, 33, 33, 0.75);
+          line-height: 32px;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .second__row {
+  }
+
+  .third__row {
+    margin-bottom: 24px;
+    .rights__reserved {
+      padding: 0px;
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: rgba(33, 33, 33, 0.7);
+      }
+    }
+
+    .design {
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: rgba(33, 33, 33, 0.7);
+      }
+    }
+
+    .icons {
+      height: 40px;
+      justify-content: flex-end;
+      padding: 0px;
+      align-items: flex-start;
+      transform: translateY(-8px);
+
+      svg {
+        height: 32px;
+        width: 32px;
+        padding: 0;
+
+        &:nth-child(2) {
+          width: 30px;
+          height: 30px;
+        }
+
+        path {
+          color: rgba(33, 33, 33, 0.7);
+        }
+      }
+    }
+  }
+
+  .train__illustration {
+    width: 239px;
+    height: 243px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+// These are the styles for tablet view
+@media only screen and (max-width: 992px) {
+  .header {
+    width: 100%;
+  }
+
+  .nav__wrapper {
+    .logo {
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.425);
+      z-index: 99;
+      display: none;
+
+      .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #dbdbdb;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        line-height: 20px;
+
+        .menu__close {
+          display: block !important;
+        }
+
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .show__menu {
+      display: block;
+    }
+
+    .menu__burger {
+      display: block !important;
+    }
+
+    .nav__right {
+      gap: 32px !important;
+    }
+  }
+
+  //styles for the footer
+  footer {
+    .first__row {
+      justify-content: space-between;
+
+      .news__col {
+        width: 100%;
+
+        .train__illustration {
+          height: 159px;
+          width: 163px;
+        }
+
+        .newsletter__subscribe {
+          .form__input {
+            .news__text {
+              font-size: 16px;
+              transform: translateY(8px);
+            }
+
+            input {
+              width: 180px;
+
+              &::placeholder {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .menu__col {
+        gap: 16px !important;
+        margin-top: 32px;
+        width: 45%;
+
+        h4 {
+          font-size: 22px;
+        }
+
+        .footer__menu {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .contact__us {
+        margin-top: 32px;
+        gap: 16px !important;
+        width: 45%;
+
+        h4 {
+          font-size: 22px;
+        }
+
+        .address {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// These are the styles for the small tablet view
+@media only screen and (max-width: 768px) {
+  .shadow {
+    width: 100vw !important;
+    padding: 12px 16px 12px 16px !important;
+  }
+
+  .button__primary,
+  .button__secondary,
+  .button__tertiary {
+    height: 36px !important;
+    font-size: 14px !important;
+    padding: 0px 16px 0px 16px !important;
+  }
+
+  .header {
+    width: 100% !important;
+    display: contents;
+  }
+
+  .nav__wrapper {
+    padding: 0 !important;
+
+    .logo {
+      h2 {
+        font-size: 22px !important;
+      }
+    }
+
+    .nav__right {
+      gap: 24px !important;
+    }
+
+    .menu {
+      a {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  //styles for footer
+  footer {
+    .form__input {
+      input {
+        height: 36px;
+      }
+    }
+
+    .third__row {
+      .design {
+        width: 33%;
+      }
+
+      .icons {
+        width: 33%;
+      }
+
+      .rights__reserved {
+        width: 33% !important;
+      }
+    }
+  }
+}
+
+//These are the styles for the mobile view
+@media only screen and (max-width: 480px) {
+  .button__primary,
+  .button__secondary,
+  .button__tertiary {
+    height: 28px !important;
+    font-size: 12px !important;
+    padding: 0px 12px 0px 12px !important;
+  }
+
+  .shadow {
+    width: 100vw !important;
+    padding: 8px 8px 8px 8px !important;
+
+    .nav__wrapper {
+      .logo {
+        h2 {
+          font-size: 14px;
+          font-family: 'Gilroy-Bold', sans-serif;
+          line-height: normal !important;
+        }
+      }
+
+      .nav__right {
+        gap: 16px !important;
+      }
+    }
+  }
+
+  //styles for footer
+  footer {
+    .first__row {
+      .news__col {
+        .train__illustration {
+          width: 143px;
+          height: 139px;
+        }
+
+        .newsletter__subscribe {
+          .form__input {
+            .news__text {
+              font-size: 14px;
+              transform: translateY(6px);
+            }
+
+            .input__text {
+              height: 28px !important;
+
+              &::placeholder {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .menu__col {
+        h4 {
+          font-size: 18px;
+        }
+
+        .footer__menu {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .contact__us {
+        h4 {
+          font-size: 18px;
+        }
+
+        .address {
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .third__row {
+      .rights__reserved {
+        width: 100% !important;
+        display: flex;
+        justify-content: center !important;
+      }
+
+      .design {
+        width: 100%;
+      }
+
+      .icons {
+        width: 100%;
+        justify-content: center;
+        gap: 32px !important;
+      }
+    }
+  }
+}
