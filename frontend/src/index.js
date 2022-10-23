@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'remixicon/fonts/remixicon.css';
+import { StoreProvider } from './Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //<React.StrictMode>
-  <App />
-  //</React.StrictMode>
+  <StoreProvider>
+    <App />
+  </StoreProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -24,6 +24,7 @@ a {
 }
 
 //Styles for buttons and their hover states
+//Primary Button Black-Fill and white Text
 .button__primary {
   height: 40px;
   display: flex;
@@ -44,6 +45,7 @@ a {
   }
 }
 
+//Secondary Button White-Fill and Black Text
 .button__secondary {
   height: 40px;
   display: flex;
@@ -64,6 +66,7 @@ a {
   }
 }
 
+//Tertiary Button Yellow-Fill and Black Text
 .button__tertiary {
   height: 40px;
   display: flex;
@@ -281,6 +284,132 @@ header {
       .add__round path {
         color: #212121;
       }
+    }
+  }
+}
+
+//These are the styles for the rating component
+.rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: #f7b500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+
+  svg {
+    font-size: 18px !important;
+  }
+}
+
+//These are the styles for the train single items
+.train-screen__item {
+  margin-top: 48px !important;
+  margin-bottom: 64px !important;
+  .img-large {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+}
+
+//This style is for the thumbnails images in Tickets page
+.img-thumbnail {
+  height: 80px !important;
+}
+
+//These are styles for the signin and signup pages
+.signin__page {
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #f7b500;
+    letter-spacing: 20% !important;
+  }
+
+  .signin__form {
+    width: 50%;
+
+    .formgroup {
+      width: 100%;
+
+      label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #212121;
+      }
+
+      input {
+        border: none !important;
+        background: #f1d485 !important;
+
+        &::placeholder {
+          color: rgba(33, 33, 33, 0.4) !important;
+          font-family: 'Poppins', sans-serif !important;
+          font-weight: 300 !important;
+          font-size: 16px !important;
+        }
+      }
+    }
+
+    .signin__button {
+      width: 100% !important;
+    }
+  }
+  .or__sections {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px !important;
+
+    .or__line {
+      height: 1px;
+      width: 40%;
+      background: #212121;
+      border-radius: 5px;
+    }
+
+    h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #212121;
+      transform: translateY(4px);
+    }
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(33, 33, 33, 0.7);
+
+    span {
+      color: #f7b500 !important;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .icons {
+    font-size: 32px;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+    margin-top: 32px !important;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .img__box {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    img {
+      width: 70%;
     }
   }
 }

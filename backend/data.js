@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Siyanda',
+      email: 'siyanda@admin.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'Stilo',
+      email: 'stilo@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   trains: [
     {
       name: '400 Explora',
@@ -23,7 +39,7 @@ const data = {
       numReviews: 15,
       rating: 4.5,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      tickets: 676,
+      tickets: 0,
       type: 'Premium',
     },
     {
@@ -156,6 +172,15 @@ const data = {
       tickets: 10,
       type: 'Budget',
     },
+  ],
+  stations: [
+    'Bellville',
+    'Mowbray',
+    'Claremont',
+    'Newlands',
+    'Pinelands',
+    'Crawford',
+    'Rosebank',
   ],
 };
 

@@ -237,6 +237,123 @@ header .nav__wrapper .menu__active .dash {
   color: #212121;
 }
 
+.rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: #f7b500;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.rating svg {
+  font-size: 18px !important;
+}
+
+.train-screen__item {
+  margin-top: 48px !important;
+  margin-bottom: 64px !important;
+}
+.train-screen__item .img-large {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.img-thumbnail {
+  height: 80px !important;
+}
+
+.signin__page h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #f7b500;
+  letter-spacing: 20% !important;
+}
+.signin__page .signin__form {
+  width: 50%;
+}
+.signin__page .signin__form .formgroup {
+  width: 100%;
+}
+.signin__page .signin__form .formgroup label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #212121;
+}
+.signin__page .signin__form .formgroup input {
+  border: none !important;
+  background: #f1d485 !important;
+}
+.signin__page .signin__form .formgroup input::-moz-placeholder {
+  color: rgba(33, 33, 33, 0.4) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+.signin__page .signin__form .formgroup input:-ms-input-placeholder {
+  color: rgba(33, 33, 33, 0.4) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+.signin__page .signin__form .formgroup input::placeholder {
+  color: rgba(33, 33, 33, 0.4) !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
+.signin__page .signin__form .signin__button {
+  width: 100% !important;
+}
+.signin__page .or__sections {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px !important;
+}
+.signin__page .or__sections .or__line {
+  height: 1px;
+  width: 40%;
+  background: #212121;
+  border-radius: 5px;
+}
+.signin__page .or__sections h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #212121;
+  transform: translateY(4px);
+}
+.signin__page p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.7);
+}
+.signin__page p span {
+  color: #f7b500 !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.signin__page .icons {
+  font-size: 32px;
+  gap: 24px !important;
+  margin-bottom: 32px !important;
+  margin-top: 32px !important;
+}
+.signin__page .icons svg {
+  cursor: pointer;
+}
+.signin__page .img__box {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.signin__page .img__box img {
+  width: 70%;
+}
+
 footer {
   background: #f7b500;
   padding: 32px 0px 0px 0px;

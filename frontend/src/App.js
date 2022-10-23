@@ -10,8 +10,13 @@ import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
 import Account from './screens/Account';
 import TrainScreen from './screens/TrainScreen';
+import { useContext } from 'react';
+import { Store } from './Store';
 
 function App() {
+  const { state } = useContext(Store);
+  const { cart } = state;
+
   return (
     <BrowserRouter>
       <div className="App">
