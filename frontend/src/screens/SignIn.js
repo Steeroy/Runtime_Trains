@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Container,
   Col,
@@ -9,16 +9,52 @@ import {
   FormControl,
 } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { Store } from '../Store';
+import { getError } from '../utils';
 
 import Helmet from '../components/Helmet';
 import '../App.css';
 import img01 from '../assets/Saly-10.png';
 
 function SignIn() {
+  const navigate = useNavigate();
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get('redirect');
   const redirect = redirectInUrl ? redirectInUrl : '/';
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+
+  const { userInfo } = state;
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      const { data } = await axios.post('/api/users/signin', {
+        email,
+        password,
+      });
+
+      ctxDispatch({ type: 'USER__SIGNIN', payload: data });
+
+      localStorage.setItem('userInfo', JSON.stringify(data));
+
+      navigate(redirect || '/');
+    } catch (err) {
+      alert(getError(err));
+    }
+  };
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate(redirect);
+    }
+  }, [navigate, redirect, userInfo]);
 
   return (
     <Helmet title="Sign In">
@@ -34,11 +70,12 @@ function SignIn() {
                 className="formgroup d-flex flex-column gap-1"
                 controlId="email"
               >
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl
                   type="email"
                   required
                   placeholder="Enter your email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </FormGroup>
 
@@ -51,10 +88,15 @@ function SignIn() {
                   type="password"
                   required
                   placeholder="Enter your password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </FormGroup>
 
-              <div type="button" className="button__tertiary signin__button">
+              <div
+                type="submit"
+                className="button__tertiary signin__button"
+                onClick={submitHandler}
+              >
                 Sign In
               </div>
             </Form>

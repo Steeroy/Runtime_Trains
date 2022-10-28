@@ -101,6 +101,13 @@ header {
   overflow: hidden;
   width: 100%;
   z-index: 99;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header {
+  transform: translateY(-16px);
 }
 header .nav__wrapper {
   padding: 12px 0px 12px 0px;
@@ -139,6 +146,24 @@ header .nav__wrapper .menu__active .dash {
   background-color: #212121;
   border-radius: 15px;
   margin-top: 8px;
+}
+
+.home {
+  background: #ffc420;
+}
+.home .left h1 {
+  width: 60%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 42.83px;
+  color: #212121;
+}
+.home .left span {
+  font-weight: 600;
+  color: #dbdbdb;
+}
+.home .right img {
+  width: 100%;
 }
 
 .tickets {
@@ -237,6 +262,12 @@ header .nav__wrapper .menu__active .dash {
   color: #212121;
 }
 
+.station__container {
+  width: 50%;
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
+}
+
 .rating {
   display: flex;
   gap: 4px;
@@ -331,6 +362,7 @@ header .nav__wrapper .menu__active .dash {
   font-weight: 500;
   font-size: 16px;
   color: rgba(33, 33, 33, 0.7);
+  margin-top: 24px;
 }
 .signin__page p span {
   color: #f7b500 !important;
@@ -340,7 +372,6 @@ header .nav__wrapper .menu__active .dash {
 .signin__page .icons {
   font-size: 32px;
   gap: 24px !important;
-  margin-bottom: 32px !important;
   margin-top: 32px !important;
 }
 .signin__page .icons svg {
@@ -352,6 +383,31 @@ header .nav__wrapper .menu__active .dash {
 }
 .signin__page .img__box img {
   width: 70%;
+}
+
+.steps {
+  width: 100%;
+}
+.steps .checkout-steps > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+.steps .checkout-steps > div.active {
+  border-bottom: 0.2rem solid #f7b500;
+  color: #f7b500;
+}
+
+.paymentmethod {
+  width: 40%;
+}
+.paymentmethod .paymentmethodform {
+  display: flex;
+  flex-direction: column;
+  gap: 12px !important;
+}
+.paymentmethod .paymentmethodform .button__tertiary {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 footer {

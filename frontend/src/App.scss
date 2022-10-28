@@ -113,6 +113,14 @@ header {
   overflow: hidden;
   width: 100%;
   z-index: 99;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .header {
+    transform: translateY(-16px);
+  }
 
   .nav__wrapper {
     padding: 12px 0px 12px 0px;
@@ -165,6 +173,34 @@ header {
         border-radius: 15px;
         margin-top: 8px;
       }
+    }
+  }
+}
+
+//styles for the home page
+// .App {
+//   background: #f7b500;
+// }
+.home {
+  background: #ffc420;
+
+  .left {
+    h1 {
+      width: 60%;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 42.83px;
+      color: #212121;
+    }
+
+    span {
+      font-weight: 600;
+      color: #dbdbdb;
+    }
+  }
+  .right {
+    img {
+      width: 100%;
     }
   }
 }
@@ -288,6 +324,14 @@ header {
   }
 }
 
+//These are stations styles
+
+.station__container {
+  width: 50%;
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
+}
+
 //These are the styles for the rating component
 .rating {
   display: flex;
@@ -385,6 +429,7 @@ header {
     font-weight: 500;
     font-size: 16px;
     color: rgba(33, 33, 33, 0.7);
+    margin-top: 24px;
 
     span {
       color: #f7b500 !important;
@@ -396,7 +441,6 @@ header {
   .icons {
     font-size: 32px;
     gap: 24px !important;
-    margin-bottom: 32px !important;
     margin-top: 32px !important;
 
     svg {
@@ -410,6 +454,34 @@ header {
 
     img {
       width: 70%;
+    }
+  }
+}
+
+.steps {
+  width: 100%;
+
+  .checkout-steps > div {
+    border-bottom: 0.2rem solid #a0a0a0;
+    color: #a0a0a0;
+  }
+  .checkout-steps > div.active {
+    border-bottom: 0.2rem solid #f7b500;
+    color: #f7b500;
+  }
+}
+
+.paymentmethod {
+  width: 40%;
+
+  .paymentmethodform {
+    display: flex;
+    flex-direction: column;
+    gap: 12px !important;
+
+    .button__tertiary {
+      margin-top: 24px;
+      margin-bottom: 24px;
     }
   }
 }

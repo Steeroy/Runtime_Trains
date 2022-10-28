@@ -1,0 +1,21 @@
+{
+  "name": "runtime_trains",
+  "version": "1.0.0",
+  "description": "1. Rendered the trains on the tickets page\r 2. added logic on the tickets page\r 3. we used redux to ensure the state of the website is maintained\r 4. we used localStorage to save our website state\r 5. We created the sign in page\r 6. We are now working on the backend logic using mongodb",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install --legacy-peer-deps && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steeroy/Runtime_Trains.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steeroy/Runtime_Trains/issues"
+  },
+  "homepage": "https://github.com/Steeroy/Runtime_Trains#readme"
+}

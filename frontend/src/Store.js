@@ -3,7 +3,19 @@ import { createContext, useReducer } from 'react';
 export const Store = createContext();
 
 const initialState = {
+  userInfo: localStorage.getItem('userInfo')
+    ? JSON.parse(localStorage.getItem('userInfo'))
+    : null,
+
   cart: {
+    stationChosen: localStorage.getItem('stationChosen')
+      ? JSON.parse(localStorage.getItem('stationChosen'))
+      : {},
+
+    paymentMethod: localStorage.getItem('paymentMethod')
+      ? localStorage.getItem('paymentMethod')
+      : '',
+
     cartItems: localStorage.getItem('cartItems')
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
@@ -66,6 +78,42 @@ function reducer(state, action) {
 
       localStorage.setItem('bookmarks', JSON.stringify(bookmarkItems));
       return { ...state, cart: { ...state.cart, bookmarkItems } };
+    }
+
+    case 'USER__SIGNIN': {
+      return { ...state, userInfo: action.playload };
+    }
+
+    case 'USER__SIGNOUT': {
+      return {
+        ...state,
+        userInfo: null,
+        cart: { cartItems: [], stationChosen: {}, paymentMethod: '' },
+      };
+    }
+
+    case 'SAVE__STATION': {
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          stationChosen: action.payload,
+        },
+      };
+    }
+
+    case 'SAVE__PAYMENT__METHOD': {
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          paymentMethod: action.payload,
+        },
+      };
+    }
+
+    case 'CART__CLEAR': {
+      return { ...state, cart: { ...state.cart, cartItems: [] } };
     }
 
     default: {
